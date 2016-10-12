@@ -124,4 +124,4 @@ Running webpack build results in a following output:
 
 As you can see, we end up with two separate files with can be inserted into an HTML template just like it should be done.
 
-Complete source code of this example is available (on Github)[https://github.com/slomek/react-on-webpack-server].
+Complete source code of this example is available [on Github](https://github.com/slomek/react-on-webpack-server).
