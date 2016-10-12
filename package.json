@@ -6,7 +6,7 @@
   "scripts": {
     "build": "npm run lint && webpack",
     "lint": "eslint --ext .js,.jsx src",
-    "start": "npm run webpack-dev-server --content-base dist/"
+    "start": "webpack-dev-server --watch --inline --content-base dist/"
   },
   "keywords": [],
   "author": "",
@@ -28,7 +28,8 @@
     "node-sass": "3.10.1",
     "sass-loader": "4.0.2",
     "style-loader": "0.13.1",
-    "webpack": "1.13.2"
+    "webpack": "1.13.2",
+    "webpack-dev-server": "1.16.2"
   },
   "dependencies": {
     "eslint-plugin-import": "1.16.0",
