@@ -1,11 +1,12 @@
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 export default {
     entry: './src/index.jsx',
     output: {
         path: './dist/',
         publicPath: '/',
-        filename: './js/bundle.js'
+        filename: './js/bundle.[chunkhash:8].js'
     },
     module: {
         loaders: [
@@ -15,7 +16,11 @@ export default {
         ]
     },
     plugins: [
-        new ExtractTextPlugin('./css/bundle.css')
+        new ExtractTextPlugin('./css/bundle.[chunkhash:8].css'),
+        new HtmlWebpackPlugin({
+            template: './src/index.html',
+            minify: false
+        })
     ],
     resolve: {
         extensions: ['', '.js', '.jsx']
