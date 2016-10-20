@@ -1,4 +1,7 @@
 node_modules
 
+dist/*.html
 dist/js/*.js
 dist/css/*.css
+
+prod

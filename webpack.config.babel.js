@@ -2,11 +2,14 @@ import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 export default {
-    entry: './src/index.jsx',
+    entry: {
+        bundle: './src/index.jsx',
+        config: './src/config.js'
+    },
     output: {
         path: './dist/',
         publicPath: '/',
-        filename: './js/bundle.[chunkhash:8].js'
+        filename: './js/[name].[chunkhash:8].js'
     },
     module: {
         loaders: [
